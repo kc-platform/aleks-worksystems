@@ -13,7 +13,7 @@ The initial release checks are followed by the portrait and About revision check
 - Opened all four external examples. The three company examples each disclose that they are independent concepts, not official sites. The independent ARWT tool loaded and displayed its diagnostic flow.
 - After deployment, opened the public English, Spanish and Russian URLs in Chrome and confirmed the translated titles, headings, navigation and language links.
 - For the portrait and About update, checked the rebuilt first screen at 1440 × 900 (EN), 768 × 1024 (RU) and 500 × 1250 (RU). The new screenshots in `screenshots/` are from that rebuilt site.
-- The supplied circular portrait was expanded into a rectangular image without its embedded logo and exported as a 187 KB JPEG. The decorative squares were removed from the hero. The revised About copy draws on the earlier Solo founder prototype's EN/ES/RU text and keeps its practical, first-person tone without transferring unverified numerical claims.
+- The supplied circular portrait was expanded into a rectangular image without its embedded logo and exported as a 187 KB JPEG. The decorative squares were removed from the hero. The About copy now uses the biography and three quantified experience points supplied by Aleks, with corresponding EN/ES translations.
 
 ## Critical review and changes
 

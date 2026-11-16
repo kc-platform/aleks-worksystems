@@ -41,7 +41,7 @@ The GitHub Actions workflow sets `SITE_URL` from the repository owner automatica
 
 The enquiry route is a prefilled `mailto:` link. It opens the visitor's email application; no data is submitted to this website, and there is no hidden contact backend. The four external examples were opened and reviewed on 2026-11-16. The three company concepts are identified on this site and on their own pages as independent demonstrations, not official or commissioned projects.
 
-Before broad promotion, Aleks should confirm his biography, contact address, LinkedIn profile, and comfort with showing the three concept examples. The hero uses an edited version of the portrait he supplied. The circular mask and embedded branding were removed to make a clean rectangular photograph for the site.
+The About section uses the biography and experience figures supplied by Aleks. Before broad promotion, he should confirm the contact address, LinkedIn profile, and comfort with showing the three concept examples. The hero uses an edited version of the portrait he supplied. The circular mask and embedded branding were removed to make a clean rectangular photograph for the site.
 
 ## Design and accessibility
 

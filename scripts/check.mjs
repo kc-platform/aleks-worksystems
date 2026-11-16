@@ -14,10 +14,12 @@ for (const lang of ['en','es','ru']) {
   assert.equal(c.services.length,4);
   assert.equal(c.steps.length,4);
   assert.equal(c.projects.length,4);
+  assert.equal(c.aboutFacts.length,3);
   const file = join(out,lang === 'en' ? '' : lang,'index.html');
   const html = await readFile(file,'utf8');
   assert.match(html,new RegExp(`<html lang="${lang}">`));
   assert.match(html,/<main id="main">/);
+  assert.match(html,/<ol class="about-facts">/);
   assert.match(html,/<link rel="canonical"/);
   assert.match(html,new RegExp(`assets/og-${lang}\\.png`));
   assert.match(html,/assets\/hero-portrait\.jpg/);
