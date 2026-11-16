@@ -27,16 +27,13 @@ npm run build
 Remove-Item Env:SITE_URL
 ```
 
-The default build URL is `https://kc-platform.github.io/aleks-worksystems/`, based on the connected GitHub account visible during setup. Change it if the new repository is created under another owner. Local links and assets use relative URLs and work under the project subpath.
+The default build URL is `https://kc-platform.github.io/aleks-worksystems/`. Local links and assets use relative URLs and work under the project subpath.
 
 ## Publish with GitHub Pages
 
-1. Create a **new public** repository named `aleks-worksystems` in the intended GitHub account. Do not use the existing `worksystems-demos` repository.
-2. If this folder is not already a Git repository, run `git init -b main` here.
-3. Run `git add .` and `git commit -m "Build Aleks Work Systems website"`.
-4. Run `git remote add origin https://github.com/USERNAME/aleks-worksystems.git` and `git push -u origin main`.
-5. In repository **Settings → Pages**, choose **GitHub Actions** as the build and deployment source.
-6. The workflow in `.github/workflows/pages.yml` builds, checks and deploys the site on every push to `main`. Confirm its successful run under **Actions**, then open `https://USERNAME.github.io/aleks-worksystems/`, `/es/` and `/ru/`.
+The public repository is [kc-platform/aleks-worksystems](https://github.com/kc-platform/aleks-worksystems). GitHub Pages is configured to use GitHub Actions. The workflow in `.github/workflows/pages.yml` builds, checks and deploys the site on every push to `main`.
+
+The public site is at [https://kc-platform.github.io/aleks-worksystems/](https://kc-platform.github.io/aleks-worksystems/), with Spanish at `/es/` and Russian at `/ru/`. To publish a change, commit it and push `main`, then confirm the workflow under **Actions**.
 
 The GitHub Actions workflow sets `SITE_URL` from the repository owner automatically. If the repository name changes, update its path in `.github/workflows/pages.yml` and rebuild. For a future custom domain, set `SITE_URL` to that domain and add the domain in GitHub Pages settings.
 
@@ -53,3 +50,4 @@ The design uses an off-white background, dark green primary actions, restrained 
 The project was checked in a browser at 1440, 1024, 768, 390 and 360 px in each language. There was no horizontal overflow or missing image. The mobile menu and RU→EN language switch were exercised. Lighthouse scores were not measured.
 
 See [QA.md](QA.md) for the review record and current verification limits. The three Open Graph preview PNGs can be regenerated on Windows with `./scripts/make-og.ps1`.
+Screenshots of the published site are in [`screenshots/`](screenshots/).
