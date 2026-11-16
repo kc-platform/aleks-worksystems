@@ -41,13 +41,13 @@ The GitHub Actions workflow sets `SITE_URL` from the repository owner automatica
 
 The enquiry route is a prefilled `mailto:` link. It opens the visitor's email application; no data is submitted to this website, and there is no hidden contact backend. The four external examples were opened and reviewed on 2026-11-16. The three company concepts are identified on this site and on their own pages as independent demonstrations, not official or commissioned projects.
 
-Before broad promotion, Aleks should confirm his biography, contact address, LinkedIn profile, and comfort with showing the three concept examples. An approved portrait may be added later; the current design does not use a fictional likeness.
+Before broad promotion, Aleks should confirm his biography, contact address, LinkedIn profile, and comfort with showing the three concept examples. The hero uses an edited version of the portrait he supplied. The circular mask and embedded branding were removed to make a clean rectangular photograph for the site.
 
 ## Design and accessibility
 
-The design uses an off-white background, dark green primary actions, restrained pale green accents, Georgia for editorial headings, and the system sans-serif stack for UI and body copy. Layouts switch from two columns to one column at mobile widths. The site includes a skip link, semantic landmarks, visible focus, reduced-motion support, translated mobile navigation labels, language-specific metadata, `hreflang`, Open Graph tags, a sitemap and `robots.txt`. It contains no analytics or tracking scripts.
+The design uses an off-white background, dark green primary actions, restrained pale green accents, a rectangular editorial portrait, Georgia for headings, and the system sans-serif stack for UI and body copy. Layouts switch from two columns to one column at mobile widths. The site includes a skip link, semantic landmarks, visible focus, reduced-motion support, translated mobile navigation labels, language-specific metadata, `hreflang`, Open Graph tags, a sitemap and `robots.txt`. It contains no analytics or tracking scripts.
 
-The project was checked in a browser at 1440, 1024, 768, 390 and 360 px in each language. There was no horizontal overflow or missing image. The mobile menu and RU→EN language switch were exercised. Lighthouse scores were not measured.
+The initial release was checked in a browser at 1440, 1024, 768, 390 and 360 px in each language. There was no horizontal overflow or missing image. The mobile menu and RU→EN language switch were exercised. The portrait revision was visually reviewed at 1440 px in English, 768 px in Russian and 500 px in Russian. Lighthouse scores were not measured.
 
 See [QA.md](QA.md) for the review record and current verification limits. The three Open Graph preview PNGs can be regenerated on Windows with `./scripts/make-og.ps1`.
-Screenshots of the published site are in [`screenshots/`](screenshots/).
+Screenshots of the updated site build are in [`screenshots/`](screenshots/).
