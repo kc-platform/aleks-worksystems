@@ -1,0 +1,53 @@
+# Aleks Work Systems
+
+A lightweight, multilingual business website for Aleks Karpov. English is the default at `/`; Spanish and Russian live at `/es/` and `/ru/`.
+
+## Build
+
+Requires Node.js 22 or newer. There are no third-party runtime or build dependencies.
+
+```sh
+npm run build
+npm run check
+```
+
+The generated site is in `dist/`. The source text is in `src/content.mjs`, styles and small assets are in `src/assets/`, and the generator is `scripts/build.mjs`.
+
+Set `SITE_URL` when building for a different public address. It must be the complete URL of the site root, including a GitHub Pages project subpath and trailing slash. For example:
+
+```sh
+SITE_URL=https://USERNAME.github.io/aleks-worksystems/ npm run build
+```
+
+On PowerShell:
+
+```powershell
+$env:SITE_URL = 'https://USERNAME.github.io/aleks-worksystems/'
+npm run build
+Remove-Item Env:SITE_URL
+```
+
+The default build URL is `https://kc-platform.github.io/aleks-worksystems/`, based on the connected GitHub account visible during setup. Change it if the new repository is created under another owner. Local links and assets use relative URLs and work under the project subpath.
+
+## Publish with GitHub Pages
+
+1. Create a **new public** repository named `aleks-worksystems` in the intended GitHub account. Do not use the existing `worksystems-demos` repository.
+2. If this folder is not already a Git repository, run `git init -b main` here.
+3. Run `git add .` and `git commit -m "Build Aleks Work Systems website"`.
+4. Run `git remote add origin https://github.com/USERNAME/aleks-worksystems.git` and `git push -u origin main`.
+5. In repository **Settings → Pages**, choose **GitHub Actions** as the build and deployment source.
+6. The workflow in `.github/workflows/pages.yml` builds, checks and deploys the site on every push to `main`. Confirm its successful run under **Actions**, then open `https://USERNAME.github.io/aleks-worksystems/`, `/es/` and `/ru/`.
+
+If the repository owner is not `kc-platform`, set the `SITE_URL` environment variable in the workflow before publishing, or replace the default URL in `scripts/build.mjs`. Rebuild and inspect `dist/sitemap.xml` and the canonical tags after that change.
+
+## Content and contact
+
+The enquiry route is a prefilled `mailto:` link. It opens the visitor's email application; no data is submitted to this website, and there is no hidden contact backend. The four external examples were opened and reviewed on 2026-11-16. The three company concepts are identified on this site and on their own pages as independent demonstrations, not official or commissioned projects.
+
+Before broad promotion, Aleks should confirm his biography, contact address, LinkedIn profile, and comfort with showing the three concept examples. An approved portrait may be added later; the current design does not use a fictional likeness.
+
+## Design and accessibility
+
+The design uses an off-white background, dark green primary actions, restrained pale green accents, Georgia for editorial headings, and the system sans-serif stack for UI and body copy. Layouts switch from two columns to one column at mobile widths. The site includes a skip link, semantic landmarks, visible focus, reduced-motion support, translated mobile navigation labels, language-specific metadata, `hreflang`, Open Graph tags, a sitemap and `robots.txt`. It contains no analytics or tracking scripts.
+
+The project was checked in a browser at 1440, 1024, 768, 390 and 360 px in each language. There was no horizontal overflow or missing image. The mobile menu and RU→EN language switch were exercised. Lighthouse scores were not measured.
