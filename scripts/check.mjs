@@ -19,6 +19,7 @@ for (const lang of ['en','es','ru']) {
   assert.match(html,new RegExp(`<html lang="${lang}">`));
   assert.match(html,/<main id="main">/);
   assert.match(html,/<link rel="canonical"/);
+  assert.match(html,new RegExp(`assets/og-${lang}\\.png`));
   for (const other of ['en','es','ru']) assert.match(html,new RegExp(`hreflang="${other}"`));
   for (const id of ['services','method','examples','about','contact']) assert.match(html,new RegExp(`id="${id}"`));
   assert.equal((html.match(/Independent concept demonstration\.|Demostración conceptual independiente\.|Независимая концептуальная демонстрация\./g)||[]).length,3);
@@ -30,5 +31,5 @@ for (const lang of ['en','es','ru']) {
   assert.match(html,new RegExp(`href="${base.replaceAll('.','\\.')}assets/styles\\.css"`));
   assert.match(html,/class="wordmark" href="\.\/"/);
 }
-for (const path of ['assets/styles.css','assets/site.js','assets/favicon.svg','assets/og.svg','robots.txt','sitemap.xml','.nojekyll']) await stat(join(out,path));
+for (const path of ['assets/styles.css','assets/site.js','assets/favicon.svg','assets/og-en.png','assets/og-es.png','assets/og-ru.png','robots.txt','sitemap.xml','.nojekyll']) await stat(join(out,path));
 console.log('Static checks passed for EN, ES and RU.');

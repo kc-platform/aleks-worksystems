@@ -34,7 +34,7 @@ function page(lang) {
   <meta name="theme-color" content="#f7f8f4"><meta name="color-scheme" content="light">
   <link rel="canonical" href="${siteUrl}${route(lang)}">${alternates}<link rel="alternate" hreflang="x-default" href="${siteUrl}">
   <meta property="og:type" content="website"><meta property="og:site_name" content="Aleks Work Systems"><meta property="og:locale" content="${{en:'en_US',es:'es_EC',ru:'ru_RU'}[lang]}">
-  <meta property="og:title" content="${esc(c.title)}"><meta property="og:description" content="${esc(c.description)}"><meta property="og:url" content="${siteUrl}${route(lang)}"><meta property="og:image" content="${siteUrl}assets/og.svg">
+  <meta property="og:title" content="${esc(c.title)}"><meta property="og:description" content="${esc(c.description)}"><meta property="og:url" content="${siteUrl}${route(lang)}"><meta property="og:image" content="${siteUrl}assets/og-${lang}.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(c.title)}"><meta name="twitter:description" content="${esc(c.description)}">
   <link rel="icon" href="${assetBase}assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${assetBase}assets/styles.css"><script src="${assetBase}assets/site.js" defer></script>
 </head>
