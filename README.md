@@ -38,7 +38,7 @@ The default build URL is `https://kc-platform.github.io/aleks-worksystems/`, bas
 5. In repository **Settings → Pages**, choose **GitHub Actions** as the build and deployment source.
 6. The workflow in `.github/workflows/pages.yml` builds, checks and deploys the site on every push to `main`. Confirm its successful run under **Actions**, then open `https://USERNAME.github.io/aleks-worksystems/`, `/es/` and `/ru/`.
 
-If the repository owner is not `kc-platform`, set the `SITE_URL` environment variable in the workflow before publishing, or replace the default URL in `scripts/build.mjs`. Rebuild and inspect `dist/sitemap.xml` and the canonical tags after that change.
+The GitHub Actions workflow sets `SITE_URL` from the repository owner automatically. If the repository name changes, update its path in `.github/workflows/pages.yml` and rebuild. For a future custom domain, set `SITE_URL` to that domain and add the domain in GitHub Pages settings.
 
 ## Content and contact
 
