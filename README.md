@@ -1,53 +1,35 @@
 # Aleks Work Systems
 
-A lightweight, multilingual business website for Aleks Karpov. English is the default at `/`; Spanish and Russian live at `/es/` and `/ru/`.
+Static, multilingual website for Aleks Karpov. English is at `/`, Spanish at `/es/`, and Russian at `/ru/`. The site is published through GitHub Pages at [kc-platform.github.io/aleks-worksystems](https://kc-platform.github.io/aleks-worksystems/).
 
-## Build
+## Build and check
 
-Requires Node.js 22 or newer. There are no third-party runtime or build dependencies.
+Requires Node.js 22 or newer. No package installation is needed.
 
 ```sh
 npm run build
 npm run check
 ```
 
-The generated site is in `dist/`. The source text is in `src/content.mjs`, styles and small assets are in `src/assets/`, and the generator is `scripts/build.mjs`.
+The output is `dist/`. Set `SITE_URL` to a complete site root if the hosting address changes. The build emits 21 pages: three home pages and six standalone scenario pages in each language, with a sitemap, localized metadata and social previews.
 
-Set `SITE_URL` when building for a different public address. It must be the complete URL of the site root, including a GitHub Pages project subpath and trailing slash. For example:
+## Architecture
 
-```sh
-SITE_URL=https://USERNAME.github.io/aleks-worksystems/ npm run build
-```
+- `src/content.mjs`: services, existing project descriptions, biography and base translations.
+- `src/lab.mjs`: the six localized scenarios. Each has a slug, a service, a problem, an improvement, a verification criterion and fictional before/after records.
+- `scripts/build.mjs`: generates all static pages. Routes are derived from scenario slugs.
+- `src/assets/site.js`: keyboard accessible scenario selection, Clarity Switch, mobile menu and structured email preparation.
+- `src/assets/styles.css`: visual system and responsive layouts.
+- `scripts/make-og.ps1`: generates localized PNG previews on Windows. `src/assets/og.svg` is the vector reference.
 
-On PowerShell:
+To add a scenario, add one matching entry in each language in `src/lab.mjs`. Keep the same index across languages so language switching stays on the same subject. Provide fictional records only. Run the build and check commands, then review all three routes. To add a project to Evidence Room, update the projects in `src/content.mjs` and the corresponding decision and verification text in `scripts/build.mjs`. Label uncommissioned concepts clearly.
 
-```powershell
-$env:SITE_URL = 'https://USERNAME.github.io/aleks-worksystems/'
-npm run build
-Remove-Item Env:SITE_URL
-```
+## Interaction and contact
 
-The default build URL is `https://kc-platform.github.io/aleks-worksystems/`. Local links and assets use relative URLs and work under the project subpath.
+The hero diagram and each Lab example have a Clarity Switch. The Lab shows a concrete four-column working record before and after, plus a written explanation and a way to verify the result. Every example has a direct URL for sharing. The main page tabs update browser history so Back works.
 
-## Publish with GitHub Pages
+The contact form prepares a `mailto:` message or copies its text. It does not send data to the site. The selected Lab scenario is carried into the draft. Email: `aleks.worksystems@gmail.com`. There are no analytics or tracking cookies.
 
-The public repository is [kc-platform/aleks-worksystems](https://github.com/kc-platform/aleks-worksystems). GitHub Pages is configured to use GitHub Actions. The workflow in `.github/workflows/pages.yml` builds, checks and deploys the site on every push to `main`.
+## Publish
 
-The public site is at [https://kc-platform.github.io/aleks-worksystems/](https://kc-platform.github.io/aleks-worksystems/), with Spanish at `/es/` and Russian at `/ru/`. To publish a change, commit it and push `main`, then confirm the workflow under **Actions**.
-
-The GitHub Actions workflow sets `SITE_URL` from the repository owner automatically. If the repository name changes, update its path in `.github/workflows/pages.yml` and rebuild. For a future custom domain, set `SITE_URL` to that domain and add the domain in GitHub Pages settings.
-
-## Content and contact
-
-The enquiry route is a prefilled `mailto:` link. It opens the visitor's email application; no data is submitted to this website, and there is no hidden contact backend. The four external examples were opened and reviewed on 2026-11-16. The three company concepts are identified on this site and on their own pages as independent demonstrations, not official or commissioned projects.
-
-The About section uses the biography and experience figures supplied by Aleks. Before broad promotion, he should confirm the contact address, LinkedIn profile, and comfort with showing the three concept examples. The hero uses an edited version of the portrait he supplied. The circular mask and embedded branding were removed to make a clean rectangular photograph for the site.
-
-## Design and accessibility
-
-The design uses an off-white background, dark green primary actions, restrained pale green accents, a rectangular editorial portrait, Georgia for headings, and the system sans-serif stack for UI and body copy. Layouts switch from two columns to one column at mobile widths. The site includes a skip link, semantic landmarks, visible focus, reduced-motion support, translated mobile navigation labels, language-specific metadata, `hreflang`, Open Graph tags, a sitemap and `robots.txt`. It contains no analytics or tracking scripts.
-
-The initial release was checked in a browser at 1440, 1024, 768, 390 and 360 px in each language. There was no horizontal overflow or missing image. The mobile menu and RU→EN language switch were exercised. The portrait revision was visually reviewed at 1440 px in English, 768 px in Russian and 500 px in Russian. Lighthouse scores were not measured.
-
-See [QA.md](QA.md) for the review record and current verification limits. The three Open Graph preview PNGs can be regenerated on Windows with `./scripts/make-og.ps1`.
-Screenshots of the updated site build are in [`screenshots/`](screenshots/).
+The GitHub Actions workflow in `.github/workflows/pages.yml` builds, checks and deploys every push to `main`. Commit and push to update the existing public address. See [QA.md](QA.md) for verification notes.

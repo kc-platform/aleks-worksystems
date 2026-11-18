@@ -1,29 +1,27 @@
-# Quality review — 16 November 2026
+# Redesign quality review
 
-## Browser checks
+## Starting point
 
-The initial release checks are followed by the portrait and About revision checks.
+The previous version explained the services clearly but relied on static cards. Its four situation cards did not show a working system, and the portfolio described projects without a consistent problem, decision and verification structure. The former hero placed a large portrait alongside the offer; the portrait now appears in About, while the first screen demonstrates the work.
 
-- Opened the generated EN, ES and RU pages in the in-app browser. English opens at `/`; the other languages open at `/es/` and `/ru/`.
-- At 1440, 1024, 768, 390 and 360 px in each language, `document.documentElement.scrollWidth` was no greater than the viewport width. No missing images were reported.
-- Visually reviewed the 1440 px English desktop view, 390 px English mobile view, 360 px Russian mobile view and expanded Russian mobile menu.
-- Opened the Russian mobile menu, switched to English, and confirmed the correct URL and page language. Confirmed the expanded button announces the translated close label.
-- Confirmed the Spanish logo stays on `/es/` and its stylesheet resolves as `../assets/styles.css`.
-- Checked generated fragment links and local asset paths with `npm run check`.
-- Opened all four external examples. The three company examples each disclose that they are independent concepts, not official sites. The independent ARWT tool loaded and displayed its diagnostic flow.
-- After deployment, opened the public English, Spanish and Russian URLs in Chrome and confirmed the translated titles, headings, navigation and language links.
-- For the portrait and About update, checked the rebuilt first screen at 1440 × 900 (EN), 768 × 1024 (RU) and 500 × 1250 (RU). The new screenshots in `screenshots/` are from that rebuilt site.
-- The supplied circular portrait was expanded into a rectangular image without its embedded logo and exported as a 187 KB JPEG. The decorative squares were removed from the hero. The About copy now uses the biography and three quantified experience points supplied by Aleks, with corresponding EN/ES translations.
+## Design decisions
 
-## Critical review and changes
+The new first screen states the offer and shows a before/after working diagram. A compact service strip identifies the four commercial services without requiring interaction. The Lab uses fictional but recognizable records, with terracotta for friction and green for organized states, plus labels and text. Evidence Room separates an observed need, proposed response and check for each existing project. The project status remains explicit; no client result or testimonial is invented.
 
-- **Prospective customer:** The first screen states who Aleks helps and the four problem entry points describe concrete situations. Contact is direct by email with prefilled context.
-- **UX:** Large headings, clear section order, mobile navigation and visible focus support quick scanning. The mobile menu label and language-preserving logo were refined after browser review.
-- **Skeptical business owner:** Service descriptions state deliverables and exclusions. No testimonials, pricing, ROI figures or commissioned-project claims were invented. Every company concept is labeled independently.
+The contact section composes an email and provides a copy option. It never claims a message was sent. The existing portrait and Aleks supplied About copy remain in place.
 
-## Remaining verification limits
+## Automated checks
 
-- The public repository was created under `kc-platform` and GitHub Pages was configured to deploy with GitHub Actions. The deployed public URL is `https://kc-platform.github.io/aleks-worksystems/`.
-- Lighthouse scores and a full automated WCAG audit were not measured. Accessibility was reviewed through semantic markup, keyboard-oriented controls, focus styles, contrast choices and the browser accessibility tree.
-- The screenshots in `screenshots/` show representative first-screen views of the rebuilt site, not full-page captures. The three localized Open Graph PNGs in `src/assets/` are share-preview graphics.
-- Delivery of a message through a visitor's email application cannot be tested without sending a real enquiry. The `mailto:` links and encoded subject/body were inspected in the browser.
+Run `npm run build` and `npm run check`. The checker covers 21 generated routes, three languages, six scenarios, main section anchors, local assets, canonical and alternate URLs, and the sitemap. This is a static integrity check, not a substitute for browser testing.
+
+## Browser review
+
+The in-app browser backend was unavailable during local review. Browser checks and screenshots should be completed against the public deployment. Check the hero switch, each Lab switch, all six tabs, Back, language switching on a scenario, the mobile menu, the email draft and copy fallback at 390, 768 and 1440 px. Record any observed issues and fix them before calling the redesign verified.
+
+## Performance and accessibility
+
+The site has no external scripts, CSS frameworks, fonts or analytics. Images are local; the portrait is lazy-loaded below the first screen. Reduced motion is respected, controls have visible focus, and interactions have readable static alternatives. Lighthouse scores and field Web Vitals have not been measured; no numerical performance claim should be made without a run.
+
+## Known limits
+
+Evidence Room uses existing independent tools and concepts, with design hypotheses and manual verification suggestions. It is not a record of measured commercial outcomes. The contact form depends on the visitor's email application or clipboard permission. The project does not have server-side form handling.
