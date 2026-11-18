@@ -16,7 +16,9 @@ Run `npm run build` and `npm run check`. The checker covers 21 generated routes,
 
 ## Browser review
 
-The in-app browser backend was unavailable during local review. Browser checks and screenshots should be completed against the public deployment. Check the hero switch, each Lab switch, all six tabs, Back, language switching on a scenario, the mobile menu, the email draft and copy fallback at 390, 768 and 1440 px. Record any observed issues and fix them before calling the redesign verified.
+The in-app local browser backend was unavailable. The public deployment was checked in the Codex browser at desktop width. The first screen rendered with the new stylesheet after the asset URL was versioned. The hero switch changed its state. The customer inquiry Lab switch replaced the fictional table with the improved rows, including owner, status and next action. A scenario tab opened its standalone route, where header links resolved to the home page. Language switching kept the same document scenario in Russian and Spanish. The Spanish contact draft copy button reported “Mensaje copiado.” The browser review uncovered a history bug in the first implementation; native scenario navigation replaced it.
+
+The browser surface did not expose viewport resizing, and the installed Edge headless process crashed. Screenshots at 390 and 768 px, horizontal overflow checks at all requested widths, keyboard interaction, and Lighthouse audits remain unmeasured. Do not claim mobile visual or Lighthouse verification without another browser run.
 
 ## Performance and accessibility
 
