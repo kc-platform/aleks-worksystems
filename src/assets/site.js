@@ -16,9 +16,7 @@ function choose(i,focus=false){
 }
 if(tabs.length){
  choose(Number(document.body.dataset.selected)||0);
- tabs.forEach(tab=>tab.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();const i=Number(tab.dataset.tab);choose(i);history.pushState({scenario:i},'',tab.href);document.querySelector('#explore').scrollIntoView({block:'start'})}));
- document.querySelector('.scenario-tabs')?.addEventListener('keydown',e=>{const i=Number(document.querySelector('[data-tab][aria-selected="true"]')?.dataset.tab)||0;const next=e.key==='ArrowDown'||e.key==='ArrowRight'?(i+1)%tabs.length:e.key==='ArrowUp'||e.key==='ArrowLeft'?(i+tabs.length-1)%tabs.length:null;if(next!==null){e.preventDefault();tabs[next].click();tabs[next].focus()}});
- addEventListener('popstate',()=>{const i=tabs.findIndex(t=>t.href===location.href);choose(i>=0?i:0)});
+ document.querySelector('.scenario-tabs')?.addEventListener('keydown',e=>{const i=Number(document.querySelector('[data-tab][aria-selected="true"]')?.dataset.tab)||0;const next=e.key==='ArrowDown'||e.key==='ArrowRight'?(i+1)%tabs.length:e.key==='ArrowUp'||e.key==='ArrowLeft'?(i+tabs.length-1)%tabs.length:null;if(next!==null){e.preventDefault();location.href=tabs[next].href}});
 }
 document.querySelectorAll('[data-clarity]').forEach(unit=>{
  const button=unit.querySelector('.clarity-switch');

@@ -26,10 +26,11 @@ To add a scenario, add one matching entry in each language in `src/lab.mjs`. Kee
 
 ## Interaction and contact
 
-The hero diagram and each Lab example have a Clarity Switch. The Lab shows a concrete four-column working record before and after, plus a written explanation and a way to verify the result. Every example has a direct URL for sharing. The main page tabs update browser history so Back works.
+The hero diagram and each Lab example have a Clarity Switch. The Lab shows a concrete four-column working record before and after, plus a written explanation and a way to verify the result. Every example has a direct URL for sharing. Scenario links open their standalone pages, so Back and language switching work with normal browser navigation.
 
 The contact form prepares a `mailto:` message or copies its text. It does not send data to the site. The selected Lab scenario is carried into the draft. Email: `aleks.worksystems@gmail.com`. There are no analytics or tracking cookies.
 
 ## Publish
 
 The GitHub Actions workflow in `.github/workflows/pages.yml` builds, checks and deploys every push to `main`. Commit and push to update the existing public address. See [QA.md](QA.md) for verification notes.
+
