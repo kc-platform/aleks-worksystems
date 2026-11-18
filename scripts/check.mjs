@@ -19,7 +19,7 @@ for(const lang of languages){
   const depth=index===null?(lang==='en'?'./':'../'):(lang==='en'?'../../':'../../../');
   const html=await readFile(join(out,route,'index.html'),'utf8');
   assert.ok(html.includes('<html lang="'+lang+'">'));
-  assert.ok(html.includes('href="'+depth+'assets/styles.css?v=20261118"'));
+  assert.ok(html.includes('href="'+depth+'assets/styles.css?v=20261118b"'));
   assert.ok(html.includes('<link rel="canonical"'));
   assert.ok(html.includes('<main id="main">'));
   assert.ok(html.includes('class="clarity-switch"'));
@@ -39,4 +39,5 @@ for(const p of ['assets/styles.css','assets/site.js','assets/favicon.svg','asset
 const sitemap=await readFile(join(out,'sitemap.xml'),'utf8');
 assert.equal((sitemap.match(/<url>/g)||[]).length,21);
 console.log('Checked 21 pages, six localized scenarios, links, assets, and sitemap.');
+
 
