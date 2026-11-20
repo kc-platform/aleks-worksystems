@@ -1,0 +1,58 @@
+{
+  "servicesTitle": "¿Qué le gustaría resolver?",
+  "servicesIntro": "Podemos empezar por una sola página, una consulta que quedó pendiente o un recordatorio que dejó de llegar.",
+  "situations": [
+    {
+      "id": "visibility",
+      "title": "Que sea fácil encontrar su negocio",
+      "symptom": "Sus horarios cambian según la página que se consulte, o le falta un enlace para presentar sus servicios.",
+      "deliverable": "Puedo reunir los datos de sus servicios en una página y comprobar que cada enlace de contacto funcione.",
+      "draft": "Hola, Aleks. Quisiera que las personas encuentren información clara sobre mi negocio y sepan cómo contactarme. Esto es lo que ven hoy:"
+    },
+    {
+      "id": "intake",
+      "title": "Dar seguimiento a cada consulta",
+      "symptom": "Una solicitud llega por correo o WhatsApp. Días después, alguien tiene que volver a pedir el mismo dato.",
+      "deliverable": "Puedo preparar un registro compartido donde se vea qué se recibió, qué falta y quién dará seguimiento.",
+      "draft": "Hola, Aleks. Quisiera mejorar el seguimiento de las consultas. Así nos llega una solicitud y en este punto suele quedar pendiente:"
+    },
+    {
+      "id": "rescue",
+      "title": "Recuperar una herramienta que falla",
+      "symptom": "Una hoja de Google calcula mal un total o un recordatorio de Apps Script dejó de llegar.",
+      "deliverable": "Puedo localizar la falla, corregir el paso afectado y mostrarle cómo comprobar el resultado.",
+      "draft": "Hola, Aleks. Una herramienta que usamos necesita una corrección. Le cuento cuál es, qué debería hacer y qué está pasando:"
+    }
+  ],
+  "situationCta": "Consultar sobre esto",
+  "workTitle": "Proyectos de muestra",
+  "workIntro": "Creé estas propuestas por iniciativa propia para explorar cómo empieza una consulta en tres negocios de Quito. Ninguna fue un encargo.",
+  "work": [
+    {"name": "DBAC", "type": "Estudio contable", "method": "¿Se entiende qué servicio contable corresponde a su consulta y qué podría preguntarle al estudio?", "action": "Ver DBAC"},
+    {"name": "Nora Operaciones Inmobiliarias", "type": "Bienes raíces", "method": "Explore la propuesta como comprador y luego como vendedor. Cada uno tiene un motivo distinto para escribir.", "action": "Ver Nora"},
+    {"name": "LEGARTEP Asesoría Legal", "type": "Estudio jurídico", "method": "Busque el área de práctica que le interesa y fíjese en qué información compartiría en el primer contacto.", "action": "Ver LEGARTEP"}
+  ],
+  "methodTitle": "Cómo podemos trabajar",
+  "methodSteps": [
+    {"title": "Empezamos con un ejemplo real", "body": "Envíeme un enlace, una descripción o una captura sin datos privados. Acordamos qué cambiar y cómo comprobar que funciona."},
+    {"title": "Conservamos lo que funciona", "body": "Reviso los pasos de su tarea y hago el ajuste que necesita para resolver el problema en su trabajo diario."},
+    {"title": "Probamos el resultado", "body": "Revisamos juntos un ejemplo habitual. Le entrego el cambio con una guía breve para usarlo y comprobarlo."}
+  ],
+  "support": "Si sus necesidades cambian, podemos acordar ajustes, nuevas verificaciones o mantenimiento puntual.",
+  "aboutTitle": "Aleks Karpov",
+  "aboutBody": "Me llamo Aleks Karpov. Trabajo de forma independiente y combino experiencia en pequeños negocios, tareas administrativas y automatización. Me importa que las soluciones ayuden en el trabajo diario real: atender a los clientes, encontrar información y cumplir los plazos.",
+  "aboutQuote": "Antes de proponer una herramienta, quiero entender cómo trabaja su equipo y qué facilitaría su labor.",
+  "aboutFacts": ["He participado en las operaciones diarias de cuatro grandes empresas y más de diez pequeñas, y he dirigido cinco equipos pequeños.","He trabajado con grandes volúmenes de información para más de 160 clientes, teniendo en cuenta documentos, plazos y requisitos individuales.","He creado automatizaciones para organizar datos, enviar recordatorios y controlar plazos."],
+  "contactTitle": "¿Qué le gustaría mejorar?",
+  "contactLead": "Bastan unas líneas sobre una tarea concreta. Puede escribirme directamente o editar el mensaje de abajo.",
+  "messageLabel": "Su borrador",
+  "draftDefault": "Hola, Aleks. Tengo un negocio de servicios. Lo primero que me gustaría resolver es ",
+  "emailSubject": "Consulta para Aleks Work Systems",
+  "openEmail": "Abrir borrador de correo",
+  "copy": "Copiar mensaje",
+  "copied": "Mensaje copiado.",
+  "copyFail": "Seleccione el mensaje de arriba y cópielo.",
+  "emailHint": "El borrador se abre en su aplicación de correo. Usted decide cuándo enviarlo.",
+  "draftStart": "Hola, Aleks. Estoy poniendo en marcha un negocio de servicios. Le cuento qué ofrezco y qué me falta para recibir las primeras consultas:",
+  "draftRun": "Hola, Aleks. Tengo un negocio de servicios en marcha. Me gustaría mejorar esta parte de nuestro trabajo:"
+}

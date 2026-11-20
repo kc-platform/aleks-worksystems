@@ -1,0 +1,133 @@
+{
+  "title": "Una misma solicitud. Dos resultados diferentes.",
+  "intro": "Nina necesita un plano de su oficina para el viernes. Sigue la misma solicitud en dos negocios de servicios.",
+  "mode": "Canal de entrada",
+  "channels": [
+    "Mensajes",
+    "Formulario web"
+  ],
+  "play": "Reproducir",
+  "pause": "Pausar",
+  "replay": "Repetir",
+  "resume": "Continuar",
+  "step": "Siguiente paso",
+  "progress": "Progreso de la animación",
+  "steps": [
+    "Llegada",
+    "Datos",
+    "Asignación",
+    "Trabajo",
+    "Resultado"
+  ],
+  "story": "Ejemplo ilustrativo",
+  "request": "Plano de oficina para el viernes",
+  "customer": "Nina",
+  "phone": "Teléfono",
+  "phoneNote": "El equipo puede registrar las llamadas en la misma lista.",
+  "form": "Formulario",
+  "mail": "Correo",
+  "wa": "WhatsApp",
+  "desk": [
+    "Bandejas separadas",
+    "Registro compartido"
+  ],
+  "staff": "Equipo",
+  "specialist": "Especialista",
+  "record": "Solicitud",
+  "fields": [
+    "Plano",
+    "Archivo",
+    "Área",
+    "Responsable",
+    "Plazo",
+    "Próximo paso"
+  ],
+  "values": [
+    "Plano de oficina",
+    "Adjunto",
+    "64 m²",
+    "C",
+    "Viernes"
+  ],
+  "actions": [
+    "Revisar datos",
+    "Preparar plano",
+    "Verificar plano",
+    "Enviar plano",
+    "Cerrada"
+  ],
+  "headings": [
+    "Sin un sistema organizado",
+    "Con un sistema organizado"
+  ],
+  "lost": "Oportunidad perdida",
+  "delivered": "Servicio realizado",
+  "outcomes": [
+    "Tiempo invertido · Sin ingresos",
+    "Solicitud cerrada · Pago recibido"
+  ],
+  "paid": "Pagado",
+  "minutes": [
+    "Inicio",
+    "10 min",
+    "30 min",
+    "1 hora",
+    "2 horas",
+    "Día siguiente",
+    "Viernes"
+  ],
+  "tokens": [
+    "Solicitud",
+    "Archivo",
+    "¿Área?",
+    "64 m²",
+    "Q‑014",
+    "Plano",
+    "Pago",
+    "Formulario"
+  ],
+  "states": [
+    [
+      "Nueva solicitud",
+      "Correo sin leer",
+      "Datos dispersos",
+      "Persona incorrecta",
+      "En espera · Sin responsable",
+      "La clienta se va",
+      "Oportunidad perdida"
+    ],
+    [
+      "Nueva solicitud",
+      "Registrada",
+      "Datos completos",
+      "Asignada a C",
+      "En proceso",
+      "Plano verificado y enviado",
+      "Servicio realizado"
+    ]
+  ],
+  "formStates": [
+    [
+      "Formulario recibido",
+      "Formulario en el correo",
+      "Archivo separado",
+      "Persona incorrecta",
+      "En espera · Sin responsable",
+      "La clienta se va",
+      "Oportunidad perdida"
+    ],
+    [
+      "Formulario recibido",
+      "Registrada",
+      "Campos revisados",
+      "Asignada a C",
+      "En proceso",
+      "Plano verificado y enviado",
+      "Servicio realizado"
+    ]
+  ],
+  "summaryTitle": "Leer la comparación",
+  "summary": "Nina envía una solicitud por WhatsApp y un archivo por correo. A la izquierda, el correo queda sin leer, dos personas reenvían datos incompletos y Nina busca otra empresa mientras espera. A la derecha, el equipo reúne los mensajes, confirma el área de la oficina, asigna la solicitud a la especialista y entrega el plano. Un formulario web completo puede reunir los datos desde el inicio. También necesita una ruta clara hacia la especialista.",
+  "bridge": "Es posible que su empresa ya tenga las herramientas. Haga que funcionen como un solo sistema.",
+  "contact": "Hablemos de su proceso"
+}

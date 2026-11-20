@@ -1,0 +1,133 @@
+{
+  "title": "One inquiry. Two different outcomes.",
+  "intro": "Nina needs an office plan by Friday. Follow the same request through two service businesses.",
+  "mode": "Intake channel",
+  "channels": [
+    "Messages",
+    "Website form"
+  ],
+  "play": "Play",
+  "pause": "Pause",
+  "replay": "Replay",
+  "resume": "Resume",
+  "step": "Next step",
+  "progress": "Playback progress",
+  "steps": [
+    "Arrival",
+    "Information",
+    "Assignment",
+    "Work",
+    "Outcome"
+  ],
+  "story": "Illustrative example",
+  "request": "Office plan by Friday",
+  "customer": "Nina",
+  "phone": "Phone",
+  "phoneNote": "Staff can log phone requests in the same list.",
+  "form": "Form",
+  "mail": "Email",
+  "wa": "WhatsApp",
+  "desk": [
+    "Separate inboxes",
+    "Shared record"
+  ],
+  "staff": "Team",
+  "specialist": "Specialist",
+  "record": "Inquiry",
+  "fields": [
+    "Plan",
+    "File",
+    "Area",
+    "Owner",
+    "Deadline",
+    "Next action"
+  ],
+  "values": [
+    "Office plan",
+    "Attached",
+    "64 m²",
+    "C",
+    "Friday"
+  ],
+  "actions": [
+    "Check details",
+    "Prepare plan",
+    "Verify plan",
+    "Send plan",
+    "Closed"
+  ],
+  "headings": [
+    "Without a system",
+    "With a system"
+  ],
+  "lost": "Opportunity lost",
+  "delivered": "Service delivered",
+  "outcomes": [
+    "Time spent · No revenue",
+    "Completed · Revenue earned"
+  ],
+  "paid": "Paid",
+  "minutes": [
+    "Start",
+    "10 min",
+    "30 min",
+    "1 hour",
+    "2 hours",
+    "Next day",
+    "Friday"
+  ],
+  "tokens": [
+    "Request",
+    "File",
+    "Office area?",
+    "64 m²",
+    "Q‑014",
+    "Plan",
+    "Paid",
+    "Form"
+  ],
+  "states": [
+    [
+      "Incoming",
+      "Email unread",
+      "Details split",
+      "Wrong person",
+      "Waiting · No owner",
+      "Client leaves",
+      "Opportunity lost"
+    ],
+    [
+      "Incoming",
+      "Captured",
+      "Details complete",
+      "Assigned to C",
+      "In progress",
+      "Verified · Plan sent",
+      "Service delivered"
+    ]
+  ],
+  "formStates": [
+    [
+      "Form received",
+      "Form in inbox",
+      "File separate",
+      "Wrong person",
+      "Waiting · No owner",
+      "Client leaves",
+      "Opportunity lost"
+    ],
+    [
+      "Form received",
+      "Captured",
+      "Fields checked",
+      "Assigned to C",
+      "In progress",
+      "Verified · Plan sent",
+      "Service delivered"
+    ]
+  ],
+  "summaryTitle": "Read the comparison",
+  "summary": "Nina sends a request by WhatsApp and a file by email. On the left the file stays unread, two coworkers forward incomplete details and Nina goes elsewhere while waiting. On the right the team joins both messages, confirms the office area, assigns the request to the specialist and delivers the plan. A completed website form can supply these details up front. It still needs a clear route to the specialist.",
+  "bridge": "Your business may already have the tools. Make them work as one system.",
+  "contact": "Discuss your workflow"
+}

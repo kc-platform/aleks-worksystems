@@ -1,0 +1,146 @@
+{
+  "en": {
+    "title": "Aleks Work Systems — From first contact to a clear next step",
+    "meta": "Independent help for small service businesses. Connect your website and inquiries to the people, documents and tools that carry the work forward.",
+    "skip": "Skip to content",
+    "nav": "Main navigation",
+    "language": "Language",
+    "menu": "Menu",
+    "navHelp": "Services",
+    "navWork": "Selected work",
+    "navAbout": "About",
+    "navContact": "Contact Aleks",
+    "kicker": "Aleks Karpov · Independent practice",
+    "headline": [
+      "From first contact",
+      "to a clear next step."
+    ],
+    "lead": "I help small service businesses make their services easy to find and their client requests easier to manage.",
+    "cta": "Discuss a task",
+    "see": "Follow an inquiry",
+    "figLeft": "Incoming requests",
+    "figRight": "Organized work",
+    "pathsTitle": "Where is your business today?",
+    "paths": {
+      "run": [
+        "I’m improving an existing business",
+        "Keep the tools you trust. Fix a broken sheet, an unclear page or a missed handoff."
+      ],
+      "start": [
+        "I’m starting my business",
+        "Give people a page to find, a way to get in touch and a place for each request."
+      ]
+    },
+    "pathLink": "See this example",
+    "askRoute": "Discuss this route",
+    "runShort": "Existing business",
+    "startShort": "New business",
+    "aboutLink": "LinkedIn profile",
+    "back": "Back to top",
+    "methodTag": "Working together",
+    "aboutTag": "Behind the practice",
+    "portfolioTag": "Portfolio",
+    "servicesTag": "Ways I can help",
+    "draftSaved": "Your wording is still in the draft.",
+    "contextAdded": "Your selected topic is in the draft.",
+    "intakeSubject": "Organize incoming requests",
+    "moreExamples": "More workflow examples",
+    "toolLink": "Open the tool"
+  },
+  "es": {
+    "title": "Aleks Work Systems — Del primer contacto al siguiente paso",
+    "meta": "Ayuda independiente para pequeños negocios de servicios. Conecte su presencia en internet con el registro, el seguimiento y la atención de cada consulta.",
+    "skip": "Ir al contenido",
+    "nav": "Navegación principal",
+    "language": "Idioma",
+    "menu": "Menú",
+    "navHelp": "Servicios",
+    "navWork": "Proyectos",
+    "navAbout": "Sobre mí",
+    "navContact": "Escríbame",
+    "kicker": "Aleks Karpov · Profesional independiente",
+    "headline": [
+      "Del primer contacto",
+      "al siguiente paso."
+    ],
+    "lead": "Ayudo a pequeños negocios de servicios a que sus clientes los encuentren y a dar seguimiento a cada consulta.",
+    "cta": "Consultar sobre una tarea",
+    "see": "Seguir una consulta",
+    "figLeft": "Consultas recibidas",
+    "figRight": "Trabajo organizado",
+    "pathsTitle": "¿En qué etapa está su negocio?",
+    "paths": {
+      "run": [
+        "Quiero mejorar mi negocio",
+        "Conserve lo que le sirve. Podemos corregir una hoja de cálculo, aclarar su página o mejorar el seguimiento."
+      ],
+      "start": [
+        "Estoy iniciando mi negocio",
+        "Una página para presentar sus servicios, un canal de contacto y un registro para las primeras consultas."
+      ]
+    },
+    "pathLink": "Ver el ejemplo",
+    "askRoute": "Consultar sobre esta opción",
+    "runShort": "Negocio en marcha",
+    "startShort": "Negocio nuevo",
+    "aboutLink": "Perfil en LinkedIn",
+    "back": "Volver al inicio",
+    "methodTag": "Forma de trabajo",
+    "aboutTag": "Quién está detrás",
+    "portfolioTag": "Portafolio",
+    "servicesTag": "En qué puedo ayudarle",
+    "draftSaved": "Se conservó el texto que escribió.",
+    "contextAdded": "El borrador ya incluye el tema elegido.",
+    "intakeSubject": "Seguimiento de consultas",
+    "moreExamples": "Otros ejemplos de organización del trabajo",
+    "toolLink": "Abrir la herramienta"
+  },
+  "ru": {
+    "title": "Aleks Work Systems — От первого обращения до следующего шага",
+    "meta": "Помощь небольшим сервисным компаниям. Связываю сайт и обращения клиентов с документами, рабочими инструментами и ответственными за следующий шаг.",
+    "skip": "К содержанию",
+    "nav": "Основная навигация",
+    "language": "Язык",
+    "menu": "Меню",
+    "navHelp": "Услуги",
+    "navWork": "Примеры",
+    "navAbout": "Обо мне",
+    "navContact": "Написать Алексу",
+    "kicker": "Aleks Karpov · Частная практика",
+    "headline": [
+      "От первого контакта",
+      "до следующего шага."
+    ],
+    "lead": "Помогаю небольшим сервисным компаниям сделать услуги заметнее и наладить работу с каждым обращением клиента.",
+    "cta": "Обсудить задачу",
+    "see": "Проследить за обращением",
+    "figLeft": "Входящие обращения",
+    "figRight": "Работа по порядку",
+    "pathsTitle": "Какая задача сейчас у вашего бизнеса?",
+    "paths": {
+      "run": [
+        "Хочу улучшить действующий бизнес",
+        "Сохраним полезные инструменты. Исправим таблицу, уточним описание услуг или наладим передачу заявок."
+      ],
+      "start": [
+        "Я начинаю своё дело",
+        "Страница с услугами, удобная связь и одно место, где можно вести первые обращения."
+      ]
+    },
+    "pathLink": "Посмотреть пример",
+    "askRoute": "Обсудить этот вариант",
+    "runShort": "Действующий бизнес",
+    "startShort": "Новый бизнес",
+    "aboutLink": "Профиль в LinkedIn",
+    "back": "В начало",
+    "methodTag": "Сотрудничество",
+    "aboutTag": "Об авторе",
+    "portfolioTag": "Портфолио",
+    "servicesTag": "С чем можно обратиться",
+    "draftSaved": "Ваши правки сохранены в черновике.",
+    "contextAdded": "Выбранная тема добавлена в черновик.",
+    "intakeSubject": "Работа с обращениями",
+    "moreExamples": "Другие примеры рабочих процессов",
+    "toolLink": "Открыть инструмент"
+  }
+}

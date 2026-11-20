@@ -1,0 +1,58 @@
+{
+  "servicesTitle": "What needs attention?",
+  "servicesIntro": "A single page, a missed handoff or a broken reminder can be the whole job.",
+  "situations": [
+    {
+      "id": "visibility",
+      "title": "Help people find and contact you",
+      "symptom": "Your opening hours differ across listings, or you have no single page to send a new client.",
+      "deliverable": "I can bring the service details together on one page and check each contact link.",
+      "draft": "Hi Aleks, I’d like people to find the right information about my business and know how to reach me. Here’s what they see today:"
+    },
+    {
+      "id": "intake",
+      "title": "Give each inquiry a next step",
+      "symptom": "A request comes in by email or WhatsApp. Later, someone has to ask again for the same detail.",
+      "deliverable": "I can set up a shared record showing what came in, what is missing and who follows up.",
+      "draft": "Hi Aleks, I’d like to improve how we handle incoming requests. Here’s how a typical request reaches us and where it gets held up:"
+    },
+    {
+      "id": "rescue",
+      "title": "Existing Workflow Rescue",
+      "symptom": "A Google Sheet gives the wrong total, or an Apps Script reminder has stopped arriving.",
+      "deliverable": "I can trace the fault, fix the affected step and show you how to check the result.",
+      "draft": "Hi Aleks, a tool we already use needs a fix. Here’s the tool, what I expected it to do and what happened instead:"
+    }
+  ],
+  "situationCta": "Ask about this",
+  "workTitle": "Selected work",
+  "workIntro": "I built these independent concepts for three service businesses in Quito. Each explores a different first conversation. The businesses did not commission them.",
+  "work": [
+    {"name": "DBAC", "type": "Accounting practice", "method": "Can someone tell which accounting service fits their question and what to ask the practice?", "action": "Explore DBAC"},
+    {"name": "Nora Operaciones Inmobiliarias", "type": "Real estate", "method": "Try approaching as a buyer, then as a seller. Each has a different reason for getting in touch.", "action": "Explore Nora"},
+    {"name": "LEGARTEP Asesoría Legal", "type": "Legal practice", "method": "Look for a relevant area of practice and the information you would share in a first inquiry.", "action": "Explore LEGARTEP"}
+  ],
+  "methodTitle": "How we work together",
+  "methodSteps": [
+    {"title": "Start with one real example", "body": "Send a link, a description or a screenshot with private details removed. We agree on the change and how to tell it worked."},
+    {"title": "Keep what already works", "body": "I trace the steps involved and make the smallest change that solves the problem in your day-to-day work."},
+    {"title": "Check it and hand it over", "body": "We try a representative example. You get the finished change and a short note on how to use and check it."}
+  ],
+  "support": "If things change later, we can agree on an update, a new check or occasional maintenance.",
+  "aboutTitle": "Aleks Karpov",
+  "aboutBody": "My name is Aleks Karpov. I work independently, combining experience in small business, administration and automation. I want solutions to help with real daily work: communicating with customers, finding information and meeting deadlines.",
+  "aboutQuote": "Before suggesting a tool, I want to understand how your work is done and what would make it easier.",
+  "aboutFacts": ["I have worked in the day-to-day operations of four large companies and more than ten small businesses, and managed five small teams.","I have handled large volumes of information for more than 160 clients, keeping track of documents, deadlines and individual requirements.","I have built automations to organize data, send reminders and track deadlines."],
+  "contactTitle": "What would you like to improve?",
+  "contactLead": "A few lines about one task are enough to start. You can write to me directly or edit the draft below.",
+  "messageLabel": "Your draft",
+  "draftDefault": "Hi Aleks, I run a service business. The first thing I’d like help with is ",
+  "emailSubject": "A question for Aleks Work Systems",
+  "openEmail": "Open email draft",
+  "copy": "Copy message",
+  "copied": "Message copied.",
+  "copyFail": "Please select and copy the message above.",
+  "emailHint": "The draft opens in your email app. You choose when to send it.",
+  "draftStart": "Hi Aleks, I’m starting a service business. Here’s what I offer and what I need in place for my first inquiries:",
+  "draftRun": "Hi Aleks, I run a service business. Here’s one part of our current setup I’d like to improve:"
+}
