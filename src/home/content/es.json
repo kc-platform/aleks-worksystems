@@ -8,6 +8,7 @@
   "nav": [
     "Demostración",
     "En qué puedo ayudar",
+    "Proyectos",
     "Sobre mí",
     "Contacto"
   ],
@@ -177,5 +178,31 @@
   "emailNote": "Se abre un borrador en tu aplicación de correo para que lo revises y lo envíes. También puedes copiar el mensaje y pegarlo en tu correo web.",
   "copied": "Mensaje copiado.",
   "copyFail": "Copia el mensaje preparado aquí abajo.",
-  "direct": "Escribir directamente a Aleks"
+  "direct": "Escribir directamente a Aleks",
+  "projects": {
+    "title": "Proyectos de muestra",
+    "intro": "Creé por iniciativa propia tres conceptos de sitios para explorar cómo orientar una primera consulta en negocios de servicios de Quito. ARWT es una herramienta independiente para evaluar un proceso antes de automatizarlo.",
+    "items": {
+      "dbac": {
+        "type": "Concepto de sitio · Contabilidad",
+        "description": "Ayuda a encontrar el servicio contable adecuado y a saber qué preguntar en el primer contacto.",
+        "link": "Ver DBAC"
+      },
+      "nora": {
+        "type": "Concepto de sitio · Inmobiliaria",
+        "description": "Ofrece a compradores y vendedores recorridos distintos con un próximo paso claro para cada uno.",
+        "link": "Ver Nora"
+      },
+      "legartep": {
+        "type": "Concepto de sitio · Servicios legales",
+        "description": "Ayuda a encontrar el área de práctica adecuada y a saber qué información compartir en la primera consulta.",
+        "link": "Ver LEGARTEP"
+      },
+      "arwt": {
+        "type": "Herramienta independiente",
+        "description": "Propone preguntas sobre un proceso de trabajo para identificar qué hace falta antes de delegarlo a la automatización o a la IA.",
+        "link": "Abrir ARWT"
+      }
+    }
+  }
 }

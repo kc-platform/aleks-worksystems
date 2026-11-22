@@ -144,9 +144,13 @@ h1 em { display: block; color: var(--copper); font-weight: 400; }
 
 .split { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); gap: clamp(1.5rem, 6vw, 6rem); align-items: start; }
 .intro p { margin-top: 1rem; max-width: 31rem; }
-.service-list article { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: .4rem 1.2rem; padding: 1.2rem 0; border-top: 1px solid var(--line); }
+.service-list article, .project-list article { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: .4rem 1.2rem; padding: 1.2rem 0; border-top: 1px solid var(--line); }
 .response { color: var(--ink); font-weight: 650; margin-top: .45rem; }
 .services-end { border-top: 1px solid var(--line); padding-top: 1.2rem; }
+.projects { background: #eff3eb; border-bottom: 1px solid #d1dbce; }
+.project-list article:last-child { border-bottom: 1px solid var(--line); }
+.project-type { color: var(--muted); font-size: .875rem; margin-bottom: .32rem; }
+.project-list .text-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: .25rem; }
 .method { background: #f2f0e7; border-block: 1px solid #dcded2; }
 .method-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem 1.6rem; margin: 1.7rem 0 0; padding: 0; list-style: none; }
 .method-list li { border-top: 2px solid #90a799; padding-top: .8rem; }
@@ -181,7 +185,7 @@ textarea { resize: vertical; }
 .home-scenarios ul { margin: 0; padding-left: 1.45rem; }
 .home-scenarios li + li { margin-top: .25rem; }
 
-@media (max-width: 940px) {
+@media (max-width: 1020px) {
   .desktop-nav { display: none; }
   .lang { margin-left: auto; }
   .phone-menu { display: block; }
@@ -209,7 +213,7 @@ textarea { resize: vertical; }
   .diagram { grid-template-columns: minmax(0, 1fr) 1.2rem minmax(0, 1fr); }
   .sources li { padding-inline: .36rem; gap: .28rem; }
   .diagram-record { padding-inline: .45rem; }
-  .service-list article, .inbox-row, .contact-fields, .about { grid-template-columns: 1fr; }
+  .service-list article, .project-list article, .inbox-row, .contact-fields, .about { grid-template-columns: 1fr; }
   .contact-fields { gap: 0; }
   .about img { width: 7rem; justify-self: start; }
 }

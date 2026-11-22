@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import { renderWorkflow } from './workflow.mjs';
 import { renderScenario } from './scenario.mjs';
+import { renderProjects } from './projects.mjs';
 
 const base = fileURLToPath(new URL('./', import.meta.url));
 const locales = { en: 'English', es: 'Español', ru: 'Русский' };
@@ -24,7 +25,7 @@ const shapes = [
 const icon = shape => `<svg class="icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${shape}</svg>`;
 
 function header(c, language, localRoute, parent) {
-  const anchors = ['example', 'services', 'about', 'contact'];
+  const anchors = ['example', 'services', 'projects', 'about', 'contact'];
   const links = c.nav.map((text, index) => {
     const anchor = anchors[index];
     return `<a href="${anchor === 'contact' ? '' : parent}#${anchor}">${esc(text)}</a>`;
@@ -92,6 +93,7 @@ function homeContent(c, root) {
     <h2 id="method-title">${esc(c.methodTitle)}</h2>
     <ol class="method-list">${c.method.map(([title, description]) => `<li><h3>${esc(title)}</h3><p>${esc(description)}</p></li>`).join('')}</ol>
   </div></section>
+  ${renderProjects(c.projects, esc)}
   <section class="section wrap about" id="about" aria-labelledby="about-title">
     <img loading="lazy" width="288" height="288" src="${root}assets/home/aleks.webp" alt="">
     <div><h2 id="about-title">${esc(c.aboutTitle)}</h2><p>${esc(c.aboutBody)}</p><p>${esc(c.aboutFocus)}</p><a class="text-link" href="${linkedin}">${esc(c.aboutLink)}</a></div>

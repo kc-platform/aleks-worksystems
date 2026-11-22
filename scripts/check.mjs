@@ -26,7 +26,7 @@ function pageChecks(html, language, relative, index) {
   assert.ok(html.includes('mailto:aleks.worksystems@gmail.com'));
   for (const field of ['name', 'email', 'problem']) assert.ok(html.includes(`name="${field}"`));
 
-  const targets = index === undefined ? ['main', 'work', 'contact', 'contact-form', 'copy-message', 'before-panel', 'after-panel', 'demo-reset', 'approve', 'sample-reply']
+  const targets = index === undefined ? ['main', 'work', 'projects', 'contact', 'contact-form', 'copy-message', 'before-panel', 'after-panel', 'demo-reset', 'approve', 'sample-reply']
     : ['main', 'work', 'explore', 'contact', 'contact-form', 'copy-message', 'before-panel', 'after-panel', 'scenario-title'];
   for (const id of targets) assert.equal(html.split(`id="${id}"`).length, 2, `Missing or duplicate #${id}`);
 
@@ -55,6 +55,15 @@ for (const language of languages) {
   const options = pageChecks(home, language, relative);
   assert.deepEqual(options.states.map(state => state.length), [4, 4, 4]);
   assert.equal((home.match(/class="inbox-row /g) || []).length, 3);
+  for (const [id, url] of [
+    ['case-1', 'https://arwt.netlify.app/'],
+    ['case-2', 'https://dbac-quito-concept-2026.akd1357.chatgpt.site/'],
+    ['case-3', 'https://nora-quito-concept-2026.akd1357.chatgpt.site/'],
+    ['case-4', 'https://legartep-quito-concept-2026.akd1357.chatgpt.site/']
+  ]) {
+    assert.ok(home.split(`id="${id}"`)[1]?.split('</article>')[0].includes(`href="${url}"`), `${language} missing project ${id}`);
+  }
+  assert.ok(home.includes('href="#projects"'));
 
   const { scenarios } = lab[language];
   assert.equal(scenarios.length, 6);
@@ -65,6 +74,7 @@ for (const language of languages) {
     assert.ok(options.context.endsWith(scenario.title));
     assert.ok(html.includes(`href="${relative}${route(language)}#work"`));
     assert.ok(html.includes(`href="${relative}${route(language)}#example"`));
+    assert.ok(html.includes(`href="${relative}${route(language)}#projects"`));
     assert.ok(html.includes(`href="${relative}${scenarioRoute(language, index)}" aria-current="page"`));
     assert.ok(html.includes('data-scenario-comparison'));
     assert.equal((html.match(/class="scenario-table"/g) || []).length, 2);

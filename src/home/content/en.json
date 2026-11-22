@@ -8,6 +8,7 @@
   "nav": [
     "The demo",
     "What I can help with",
+    "Projects",
     "About",
     "Contact"
   ],
@@ -177,5 +178,31 @@
   "emailNote": "Your email app opens a draft for you to review and send. You can also copy the message and paste it into webmail.",
   "copied": "Message copied.",
   "copyFail": "Copy the prepared message below.",
-  "direct": "Email Aleks directly"
+  "direct": "Email Aleks directly",
+  "projects": {
+    "title": "Selected projects",
+    "intro": "Three self-initiated website concepts explore how service businesses in Quito can guide a first inquiry. ARWT is a separate tool for assessing a workflow before automating it.",
+    "items": {
+      "dbac": {
+        "type": "Website concept · Accounting",
+        "description": "Helps a visitor find the accounting service that fits their question and decide what to ask the practice.",
+        "link": "Explore DBAC"
+      },
+      "nora": {
+        "type": "Website concept · Real estate",
+        "description": "Gives buyers and sellers distinct paths, with a clear next step for each.",
+        "link": "Explore Nora"
+      },
+      "legartep": {
+        "type": "Website concept · Legal services",
+        "description": "Helps visitors find the relevant area of practice and see what to share in their first inquiry.",
+        "link": "Explore LEGARTEP"
+      },
+      "arwt": {
+        "type": "Independent tool",
+        "description": "Guides you through questions about a workflow so you can identify what needs to be in place before delegating it to automation or AI.",
+        "link": "Open ARWT"
+      }
+    }
+  }
 }
