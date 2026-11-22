@@ -222,3 +222,36 @@ textarea { resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   .routes path { animation: none; }
 }
+
+.scenario-intro { padding-block: clamp(2.6rem, 5.5vw, 5.3rem); }
+.scenario-back { display: inline-block; margin-bottom: 1.45rem; }
+.scenario-intro h1 { max-width: 19ch; }
+.scenario-intro .lead { max-width: 42rem; }
+.scenario-section { padding-block: clamp(1.75rem, 4vw, 3.75rem); }
+.scenario-comparison { background: var(--white); border: 1px solid #b7c7b8; border-radius: 9px; }
+.scenario-panel + .scenario-panel { border-top: 1px solid var(--line); }
+.scenario-panel[hidden] + .scenario-panel { border-top: 0; }
+.scenario-panel h2 { font-size: clamp(1.6rem, 2.6vw, 2.15rem); }
+.sample-note { color: var(--muted); font-size: .875rem; }
+.scenario-static-note { padding: .75rem 1rem 0; }
+.scenario-table { width: 100%; table-layout: fixed; border-collapse: collapse; margin-top: .8rem; }
+.scenario-table th, .scenario-table td { padding: .75rem; text-align: start; vertical-align: top; overflow-wrap: anywhere; }
+.scenario-table thead { background: #f2efe7; }
+#after-panel .scenario-table thead { background: var(--mint); }
+.scenario-table tbody tr { border-bottom: 1px solid var(--line); }
+.cell-label { display: none; }
+.scenario-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-block: 1.55rem; }
+.scenario-notes dt { color: var(--ink); font-weight: 650; }
+.scenario-notes dd { color: var(--body); margin-top: .32rem; }
+.home-scenarios [aria-current="page"] { font-weight: 700; }
+
+@media (max-width: 650px) {
+  .scenario-table, .scenario-table tbody { display: block; }
+  .scenario-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .scenario-table tbody tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scenario-table th, .scenario-table td { padding: .55rem .4rem; }
+  .scenario-table tbody th { grid-column: 1 / -1; background: #f2efe7; }
+  #after-panel .scenario-table tbody th { background: var(--mint); }
+  .cell-label { display: block; color: var(--muted); font-size: .875rem; font-weight: 400; }
+  .scenario-notes { grid-template-columns: 1fr; }
+}

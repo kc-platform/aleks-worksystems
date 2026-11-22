@@ -16,3 +16,7 @@ The home pages now introduce the practice, show how an inquiry is handled, and l
 The inquiry uses sample data. Its approval and sample reply change a local record. The contact form opens an email draft for the visitor to review and send, and the direct address works as a mail link. The browser checks stopped before sending an email. A verified build of Reminder Pilot was unavailable in the project, workspace archives, GitHub, and connected Drive.
 
 Pages deployment is triggered by updates to `main`. Review the redesign on its own branch before approving a merge.
+
+## Standalone example follow-up
+
+All 18 standalone examples now use the same header, footer, favicon, language picker and contact form as the home page. The original URLs and locale equivalents are preserved. In Chrome, tested all 18 examples at 390, 768 and 1440 px, including switching views and checking horizontal overflow. Also verified the footer link to Files and documents, keyboard activation, language switching within the example, return to the same list, and inclusion of the scenario in the email draft.

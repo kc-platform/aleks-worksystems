@@ -15,19 +15,16 @@ The output is `dist/`. To preview the build, run `node scripts/serve.mjs` and op
 
 ## Architecture
 
-- `src/home/`: localized home pages, the Follow an Inquiry demonstration and its assets.
-- `src/content.mjs`: services, project descriptions, biography and base translations for the standalone scenario pages.
+- `src/home/`: shared template and assets, localized home content, Follow an Inquiry, and the standalone example layout.
 - `src/lab.mjs`: the six localized scenarios. Each has a slug, a service, a problem, an improvement, a verification criterion and fictional before/after records.
 - `scripts/build.mjs`: generates all static pages. Routes are derived from scenario slugs.
-- `src/assets/site.js`: keyboard accessible scenario selection, Clarity Switch, mobile menu and structured email preparation.
-- `src/assets/styles.css`: visual system and responsive layouts.
 - `scripts/make-og.ps1`: generates localized PNG previews on Windows. `src/assets/og.svg` is the vector reference.
 
-To add a scenario, add one matching entry in each language in `src/lab.mjs`. Keep the same index across languages so language switching stays on the same subject. Provide fictional records only. Run the build and check commands, then review all three routes. To add a project to Evidence Room, update the projects in `src/content.mjs` and the corresponding decision and verification text in `scripts/build.mjs`. Label uncommissioned concepts clearly.
+To add a scenario, add one matching entry in each language in `src/lab.mjs`. Keep the same index across languages so language switching stays on the same subject. Provide fictional records only. Run the build and check commands, then review all three routes.
 
 ## Interaction and contact
 
-Follow an Inquiry uses one fictional WhatsApp message. Use Before to step through the dropped handoff. Use After to review the shared record, approve the clarification, and add a sample reply. Open the activity history to see what changed. Reset returns both views to their starting points. All demo actions run locally. The standalone Lab pages use the Clarity Switch to compare working records before and after. Every Lab scenario keeps its direct URL.
+Follow an Inquiry uses one fictional WhatsApp message. Use Before to step through the dropped handoff. Use After to review the shared record, approve the clarification, and add a sample reply. Open the activity history to see what changed. Reset returns both views to their starting points. All demo actions run locally. The standalone Lab pages use the same Before and After controls to compare working records. Every Lab scenario keeps its direct URL.
 
 The contact form prepares a `mailto:` message or copies its text. It does not send data to the site. On standalone Lab pages, the selected scenario is carried into the Lab draft. Email: `aleks.worksystems@gmail.com`. There are no analytics or tracking cookies.
 
