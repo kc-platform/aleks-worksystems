@@ -1,9 +1,9 @@
-Add-Type -AssemblyName System.Drawing
+﻿Add-Type -AssemblyName System.Drawing
 $source = Join-Path (Split-Path $PSScriptRoot -Parent) 'src\assets'
 $headlines = @{
-  en = @('Make everyday', 'work simpler.', 'WORK SYSTEMS LAB / THE CLARITY SWITCH', 'AS IT IS  >  AS IT COULD BE', 'OWNER  /  STATUS  /  NEXT STEP')
-  es = @('Haz más simple', 'el trabajo diario.', 'LABORATORIO DE SISTEMAS / CLARIDAD', 'COMO ESTÁ  >  COMO PODRÍA SER', 'RESPONSABLE  /  ESTADO  /  SIGUIENTE PASO')
-  ru = @('Повседневная работа', 'может быть проще.', 'ЛАБОРАТОРИЯ СИСТЕМ / ЯСНОСТЬ', 'КАК СЕЙЧАС  >  КАК МОЖЕТ БЫТЬ', 'ОТВЕТСТВЕННЫЙ  /  СТАТУС  /  ДАЛЬШЕ')
+  en = @('Make everyday work', 'easier to manage.', 'FROM CHAOS TO CLARITY', 'ONE SHARED RECORD', 'OWNER  /  STATUS  /  NEXT STEP')
+  es = @('Organiza mejor', 'el trabajo diario.', 'DEL CAOS A LA CLARIDAD', 'UN REGISTRO COMPARTIDO', 'RESPONSABLE  /  ESTADO  /  PASO')
+  ru = @('Управлять работой', 'стало проще.', 'ОТ ХАОСА К ЯСНОСТИ', 'ЕДИНАЯ ЗАПИСЬ', 'ОТВЕТСТВЕННЫЙ  /  СТАТУС  /  ШАГ')
 }
 $paper=[System.Drawing.Color]::FromArgb(245,243,236)
 $ink=[System.Drawing.Color]::FromArgb(34,38,35)
@@ -18,10 +18,10 @@ foreach($language in @('en','es','ru')){
   $g.Clear($paper)
   $g.FillRectangle([System.Drawing.SolidBrush]::new($order),0,0,1200,12)
   $brand=[System.Drawing.Font]::new('Arial',23,[System.Drawing.FontStyle]::Bold)
-  $headingSize=if($language -eq 'ru'){56}elseif($language -eq 'es'){66}else{72}
+  $headingSize=if($language -eq 'ru'){48}elseif($language -eq 'es'){57}else{50}
   $heading=[System.Drawing.Font]::new('Arial',$headingSize,[System.Drawing.FontStyle]::Bold)
   $detail=[System.Drawing.Font]::new('Arial',18,[System.Drawing.FontStyle]::Bold)
-  $small=[System.Drawing.Font]::new('Arial',12,[System.Drawing.FontStyle]::Bold)
+  $small=[System.Drawing.Font]::new('Arial',11,[System.Drawing.FontStyle]::Bold)
   $g.DrawString('ALEKS WORK SYSTEMS',$brand,[System.Drawing.SolidBrush]::new($order),72,63)
   $g.DrawString($headlines[$language][0],$heading,[System.Drawing.SolidBrush]::new($ink),68,185)
   $g.DrawString($headlines[$language][1],$heading,[System.Drawing.SolidBrush]::new($order),68,274)

@@ -1,153 +1,156 @@
-(() => {
-  'use strict';
-  const packet = document.getElementById('portable-pages');
-  const pages = packet ? JSON.parse(packet.textContent) : null;
-  if (pages) {
-    const initial = document.body.cloneNode(true);
-    initial.querySelectorAll('script:not(#case-data)').forEach(el => el.remove());
-    pages.en = {body: initial.innerHTML, title: document.title, desc: document.querySelector('meta[name="description"]').content};
-  }
-  function showLanguage(code, carried) {
-    const page = pages[code];
-    document.documentElement.lang = code;
-    document.title = page.title;
-    document.querySelector('meta[name="description"]').content = page.desc;
-    const template = document.createElement('template');
-    template.innerHTML = page.body;
-    document.body.replaceChildren(template.content);
-    mount(carried);
-  }
-  let handlers;
-  function mount(carried) {
-    handlers?.abort();
-    handlers = new AbortController();
-    const pick = selector => document.querySelector(selector);
-    const all = selector => [...document.querySelectorAll(selector)];
-    const config = JSON.parse(pick('#case-data').textContent);
-    const message = pick('#message');
-    const status = pick('#copy-status');
-    const mobileMenu = pick('.phone-menu');
-    let workflowState;
-    let topic = 'default';
-    let contextName = '';
-    let edited = false;
-    const transferKey = 'aleks-work-systems:language-change';
+'use strict';
 
-    const save = () => ({workflow: workflowState(), topic, text: edited ? message.value : null});
+const copy = JSON.parse(document.querySelector('#home-copy').textContent);
+const byId = id => document.getElementById(id);
 
-    function retainForLanguage(link) {
-      const handoff = {
-        destination: link.href.split('#')[0], when: Date.now(), ...save()
-      };
-      try {
-        sessionStorage.setItem(transferKey, JSON.stringify(handoff));
-      } catch {
-        // A restricted file viewer can keep the original draft available in this tab.
-        if (edited) {
-          link.target = '_blank';
-          link.rel = 'noopener';
-        }
-      }
-    }
-    function restoreLanguage() {
-      let saved;
-      try {
-        saved = JSON.parse(sessionStorage.getItem(transferKey));
-        sessionStorage.removeItem(transferKey);
-      } catch { return; }
-      if (!saved || saved.destination !== location.href.split('#')[0] ||
-          Date.now() - saved.when > 30000) return;
-      return saved;
-    }
-    function applyState(saved) {
-      if (!Object.hasOwn(config.drafts, saved.topic)) return;
-      topic = saved.topic;
-      contextName = config.topics[topic];
-      edited = typeof saved.text === 'string';
-      message.value = edited ? saved.text : config.drafts[topic];
-      if (edited) status.textContent = config.u.draftSaved;
-    }
+const modes = [...document.querySelectorAll('[data-mode]')];
+const panels = { before: byId('before-panel'), after: byId('after-panel') };
+const steps = [...document.querySelectorAll('.before-track li')];
+const history = document.querySelector('.history');
+const entries = [...history.querySelectorAll('li')];
+const afterToggle = document.querySelector('[data-mode=after]');
+const next = byId('before-next');
+const compare = byId('compare');
+const approve = byId('approve');
+const reply = byId('sample-reply');
+const status = byId('record-status');
+const announcement = byId('demo-announcement');
+let beforeStep = 0;
+let stage = 0;
 
-    function setMail() {
-      const subject = config.subject + (contextName ? ' · ' + contextName : '');
-      const body = message.value.replace(/\r?\n/g, '\r\n');
-      pick('#open-email').href = 'mailto:' + config.mail + '?subject=' +
-        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    }
-    function formContext(key, label) {
-      topic = key;
-      contextName = label.trim();
-      if (!edited) message.value = config.drafts[key];
-      status.textContent = edited ? config.u.draftSaved : config.u.contextAdded;
-      setMail();
-    }
-    for (const link of all('[data-locale]')) {
-      const url = new URL(link.href, location.href);
-      if (!pages && url.protocol !== 'file:') url.pathname = url.pathname.replace(/index\.html$/, '');
-      link.href = url.href;
-      link.addEventListener('click', e => {
-        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        if (location.hash && document.getElementById(location.hash.slice(1))) {
-          const href = new URL(link.href);
-          href.hash = location.hash;
-          link.href = href.href;
-        }
-        if (pages) {
-          e.preventDefault();
-          const saved = save();
-          const scrollY = window.scrollY;
-          try { history.replaceState(null, '', link.href); } catch { /* Some offline viewers use an opaque URL. */ }
-          showLanguage(link.dataset.locale, saved);
-          const anchor = document.getElementById(location.hash.slice(1));
-          if (anchor) anchor.scrollIntoView();
-          else window.scrollTo(0,scrollY);
-          document.querySelector('[data-locale][aria-current]').focus({preventScroll:true});
-        } else retainForLanguage(link);
-      });
-    }
-    for (const link of all('[data-context]')) {
-      link.addEventListener('click', () => {
-        const key = link.dataset.context;
-        formContext(key, link.dataset.topic || config.topics[key]);
-        document.getElementById('contact').scrollIntoView();
-      });
-    }
-    message.addEventListener('input', () => {
-      edited = message.value !== config.drafts[topic];
-      status.textContent = '';
-      setMail();
-    });
-    pick('#copy-message').addEventListener('click', async () => {
-      let success = false;
-      try {
-        if (navigator.clipboard) {
-          await navigator.clipboard.writeText(message.value);
-          success = true;
-        }
-      } catch { /* A file or embedded viewer may restrict the clipboard. */ }
-      if (!success) {
-        message.focus();
-        message.select();
-        try { success = document.execCommand('copy'); } catch { /* Keep the text selected. */ }
-      }
-      status.textContent = success ? config.copied : config.copyFail;
-    });
-    mobileMenu.querySelector('nav').addEventListener('click', () => { mobileMenu.open = false; });
-    document.body.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && mobileMenu.open) { mobileMenu.open = false; mobileMenu.querySelector('summary').focus(); }
-    }, {signal:handlers.signal});
-    document.body.addEventListener('click', e => {
-      if (mobileMenu.open && !mobileMenu.contains(e.target)) mobileMenu.open = false;
-    }, {signal:handlers.signal});
-    const saved = carried ?? (!pages ? restoreLanguage() : null);
-    if (saved) applyState(saved);
-    setMail();
-    const timeline = JSON.parse(pick('#workflow-timeline').textContent);
-    workflowState = InquiryComparison.mount(pick('#lab'), timeline, config.d, saved?.workflow, handlers.signal);
-    document.documentElement.classList.add('enhanced');
+function showMode(mode) {
+  for (const button of modes) {
+    const selected = button.dataset.mode === mode;
+    button.setAttribute('aria-pressed', String(selected));
+    panels[button.dataset.mode].hidden = !selected;
   }
-  const initialLanguage = new URLSearchParams(location.search).get('lang');
-  if (pages && initialLanguage && Object.hasOwn(pages, initialLanguage)) showLanguage(initialLanguage, null);
-  else mount(null);
-  if (pages && location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-})();
+}
+
+function renderBefore() {
+  steps.forEach((step, index) => {
+    if (index === beforeStep) step.setAttribute('aria-current', 'step');
+    else step.removeAttribute('aria-current');
+    step.querySelector('p').hidden = index > beforeStep;
+  });
+  const finished = beforeStep === steps.length - 1;
+  next.hidden = finished;
+  compare.hidden = !finished;
+}
+
+function renderAfter() {
+  const [state, nextAction, decision] = copy.states[stage];
+  status.textContent = state;
+  status.dataset.stage = stage;
+  byId('record-next').textContent = nextAction;
+  byId('decision-text').textContent = decision;
+  byId('question').hidden = stage !== 0;
+  approve.hidden = stage !== 0;
+  reply.hidden = stage !== 1;
+  byId('missing-text').textContent = stage === 2 ? copy.readyDetails : copy.missingDetails;
+  byId('sample-details').hidden = stage !== 2;
+  entries.forEach((entry, index) => { entry.hidden = index >= 3 + stage; });
+}
+
+for (const button of modes) {
+  button.addEventListener('click', () => {
+    showMode(button.dataset.mode);
+    announcement.textContent = panels[button.dataset.mode].querySelector('h3').textContent;
+  });
+}
+next.addEventListener('click', () => {
+  beforeStep += 1;
+  renderBefore();
+  announcement.textContent = steps[beforeStep].textContent.trim();
+  if (next.hidden) compare.focus();
+});
+compare.addEventListener('click', () => {
+  showMode('after');
+  announcement.textContent = panels.after.querySelector('h3').textContent;
+  afterToggle.focus();
+});
+
+approve.addEventListener('click', () => {
+  stage = 1;
+  renderAfter();
+  announcement.textContent = copy.states[stage][3];
+  reply.focus();
+});
+reply.addEventListener('click', () => {
+  stage = 2;
+  renderAfter();
+  announcement.textContent = copy.states[stage][3];
+  status.focus();
+});
+byId('demo-reset').addEventListener('click', () => {
+  beforeStep = 0;
+  stage = 0;
+  history.open = false;
+  renderBefore();
+  renderAfter();
+  showMode('before');
+  announcement.textContent = copy.resetMessage;
+});
+renderBefore();
+for (const control of document.querySelectorAll('[data-demo-control]')) control.hidden = false;
+
+const menu = document.querySelector('.phone-menu');
+menu.addEventListener('click', event => {
+  if (event.target.closest('a')) menu.open = false;
+});
+menu.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menu.open) {
+    menu.open = false;
+    menu.querySelector('summary').focus();
+  }
+});
+
+const languages = document.querySelectorAll('.lang a');
+function syncLanguageLinks() {
+  for (const link of languages) {
+    const url = new URL(link.href);
+    url.hash = location.hash;
+    link.href = url.href;
+  }
+}
+syncLanguageLinks();
+window.addEventListener('hashchange', syncLanguageLinks);
+
+const form = byId('contact-form');
+const feedback = byId('copy-status');
+const fallback = byId('copy-fallback');
+const contactFields = [...form.querySelectorAll('[required]')];
+
+function validDraft() {
+  for (const field of contactFields) field.value = field.value.trim();
+  return form.reportValidity();
+}
+
+function message() {
+  const [name, email, problem] = contactFields.map(field => field.value);
+  return `${copy.fields[0]}: ${name}\n${copy.fields[1]}: ${email}\n\n${problem}`;
+}
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (!validDraft()) return;
+  window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(copy.subject)}&body=${encodeURIComponent(message())}`;
+});
+byId('copy-message').addEventListener('click', async () => {
+  if (!validDraft()) return;
+  const draft = message();
+  try {
+    await navigator.clipboard.writeText(draft);
+    fallback.hidden = true;
+    feedback.textContent = copy.copied;
+  } catch {
+    fallback.value = draft;
+    fallback.hidden = false;
+    feedback.textContent = copy.copyFail;
+    fallback.select();
+  }
+});
+form.addEventListener('input', () => {
+  fallback.hidden = true;
+  feedback.textContent = '';
+});
+form.hidden = false;

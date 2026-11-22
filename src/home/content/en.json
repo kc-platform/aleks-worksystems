@@ -1,58 +1,181 @@
 {
-  "servicesTitle": "What needs attention?",
-  "servicesIntro": "A single page, a missed handoff or a broken reminder can be the whole job.",
-  "situations": [
-    {
-      "id": "visibility",
-      "title": "Help people find and contact you",
-      "symptom": "Your opening hours differ across listings, or you have no single page to send a new client.",
-      "deliverable": "I can bring the service details together on one page and check each contact link.",
-      "draft": "Hi Aleks, I’d like people to find the right information about my business and know how to reach me. Here’s what they see today:"
-    },
-    {
-      "id": "intake",
-      "title": "Give each inquiry a next step",
-      "symptom": "A request comes in by email or WhatsApp. Later, someone has to ask again for the same detail.",
-      "deliverable": "I can set up a shared record showing what came in, what is missing and who follows up.",
-      "draft": "Hi Aleks, I’d like to improve how we handle incoming requests. Here’s how a typical request reaches us and where it gets held up:"
-    },
-    {
-      "id": "rescue",
-      "title": "Existing Workflow Rescue",
-      "symptom": "A Google Sheet gives the wrong total, or an Apps Script reminder has stopped arriving.",
-      "deliverable": "I can trace the fault, fix the affected step and show you how to check the result.",
-      "draft": "Hi Aleks, a tool we already use needs a fix. Here’s the tool, what I expected it to do and what happened instead:"
-    }
+  "title": "Aleks Work Systems | Clearer work for small service businesses",
+  "meta": "I help small service businesses organize inquiries, information, responsibilities and workflows, and make everyday work more reliable.",
+  "skip": "Skip to content",
+  "navLabel": "Main navigation",
+  "language": "Language",
+  "menu": "Menu",
+  "nav": [
+    "The demo",
+    "What I can help with",
+    "About",
+    "Contact"
   ],
-  "situationCta": "Ask about this",
-  "workTitle": "Selected work",
-  "workIntro": "I built these independent concepts for three service businesses in Quito. Each explores a different first conversation. The businesses did not commission them.",
-  "work": [
-    {"name": "DBAC", "type": "Accounting practice", "method": "Can someone tell which accounting service fits their question and what to ask the practice?", "action": "Explore DBAC"},
-    {"name": "Nora Operaciones Inmobiliarias", "type": "Real estate", "method": "Try approaching as a buyer, then as a seller. Each has a different reason for getting in touch.", "action": "Explore Nora"},
-    {"name": "LEGARTEP Asesoría Legal", "type": "Legal practice", "method": "Look for a relevant area of practice and the information you would share in a first inquiry.", "action": "Explore LEGARTEP"}
+  "back": "Back to top",
+  "eyebrow": "From chaos to clarity",
+  "headline": [
+    "Make everyday work",
+    "easier to manage."
   ],
-  "methodTitle": "How we work together",
-  "methodSteps": [
-    {"title": "Start with one real example", "body": "Send a link, a description or a screenshot with private details removed. We agree on the change and how to tell it worked."},
-    {"title": "Keep what already works", "body": "I trace the steps involved and make the smallest change that solves the problem in your day-to-day work."},
-    {"title": "Check it and hand it over", "body": "We try a representative example. You get the finished change and a short note on how to use and check it."}
+  "lead": "I help small service businesses organize information, responsibilities, and workflows — then improve them with practical tools and automation where needed.",
+  "cta": "Tell me what's not working",
+  "see": "See how it works",
+  "figure": "An inquiry takes shape",
+  "sources": [
+    "Customer message",
+    "Team chat",
+    "Job notes"
   ],
-  "support": "If things change later, we can agree on an update, a new check or occasional maintenance.",
-  "aboutTitle": "Aleks Karpov",
-  "aboutBody": "My name is Aleks Karpov. I work independently, combining experience in small business, administration and automation. I want solutions to help with real daily work: communicating with customers, finding information and meeting deadlines.",
-  "aboutQuote": "Before suggesting a tool, I want to understand how your work is done and what would make it easier.",
-  "aboutFacts": ["I have worked in the day-to-day operations of four large companies and more than ten small businesses, and managed five small teams.","I have handled large volumes of information for more than 160 clients, keeping track of documents, deadlines and individual requirements.","I have built automations to organize data, send reminders and track deadlines."],
-  "contactTitle": "What would you like to improve?",
-  "contactLead": "A few lines about one task are enough to start. You can write to me directly or edit the draft below.",
-  "messageLabel": "Your draft",
-  "draftDefault": "Hi Aleks, I run a service business. The first thing I’d like help with is ",
-  "emailSubject": "A question for Aleks Work Systems",
-  "openEmail": "Open email draft",
+  "record": "One shared record",
+  "recordItems": [
+    "Owner",
+    "Status",
+    "Next action"
+  ],
+  "figureNote": "The Self-Repairing Website",
+  "demoTitle": "Follow an Inquiry",
+  "demoIntro": "See what changes when everyday work becomes organized and reliable.",
+  "demoLabel": "Interactive demonstration",
+  "exampleNote": "A fictional example. All actions stay in this browser.",
+  "requestLabel": "Customer message via WhatsApp",
+  "quote": "Hi, I'd like to get a quote for your service. What information do you need?",
+  "principle": "People should spend their attention on decisions and exceptions. Routine steps can follow clear rules.",
+  "modeLabel": "Compare workflows",
+  "before": "Before",
+  "after": "After",
+  "reset": "Reset demo",
+  "beforeHeading": "An inquiry slips through",
+  "beforeIntro": "Follow what happens when a request lives in messages alone.",
+  "beforeSteps": [
+    [
+      "A message arrives",
+      "Maya reads the request in WhatsApp. The service postcode and preferred date are missing."
+    ],
+    [
+      "The request is forwarded",
+      "Maya passes it to Leo in the team chat. Neither person is clearly responsible for replying."
+    ],
+    [
+      "Urgent work takes over",
+      "Leo is called to an urgent job. The quote request drops out of sight."
+    ],
+    [
+      "The customer is still waiting",
+      "The request is unanswered. The team has no shared status or reminder to follow up."
+    ]
+  ],
+  "nextStep": "Next step",
+  "compare": "See the organized workflow",
+  "afterHeading": "One shared inquiry record",
+  "owner": "Owner",
+  "ownerValue": "Maya · Customer inquiries",
+  "status": "Status",
+  "next": "Next action",
+  "decision": "Needs your decision",
+  "missing": "Missing information",
+  "automatic": "Handled automatically",
+  "history": "Activity history",
+  "question": "What is the service postcode, and what date would work for you?",
+  "readyDetails": "Postcode and preferred date recorded.",
+  "missingDetails": "Service postcode and preferred date.",
+  "autoDetails": "The request was logged, assigned to Maya, and checked for missing details.",
+  "approval": "Approve clarification",
+  "reply": "Add sample reply",
+  "noScript": "With a shared record, Maya owns the inquiry. The request waits for a postcode and preferred date. Maya approves the question and can prepare a quote once the details arrive.",
+  "historyItems": [
+    "Inquiry captured in one record.",
+    "Assigned to Maya using the inquiry rule.",
+    "Missing postcode and date flagged.",
+    "Maya approved the clarification. Waiting for the customer.",
+    "Sample reply added. The inquiry moved to quote preparation."
+  ],
+  "states": [
+    [
+      "Needs approval",
+      "Maya reviews the clarification question.",
+      "Review the proposed question.",
+      "The request needs Maya’s decision."
+    ],
+    [
+      "Waiting for details",
+      "Maya checks for the customer’s reply.",
+      "Clarification approved. No decision is needed yet.",
+      "The request is waiting for the customer’s details."
+    ],
+    [
+      "Ready to quote",
+      "Maya prepares the quote.",
+      "Check the scope and prepare a quote.",
+      "The record has the details Maya needs to prepare a quote."
+    ]
+  ],
+  "resetMessage": "Demo reset.",
+  "sample": "Sample reply: SW11 3AA, any Tuesday morning.",
+  "servicesTitle": "What I Can Help With",
+  "servicesIntro": "Start with one part of the business that keeps getting stuck. I work with small service teams, typically 2–15 people.",
+  "services": [
+    [
+      "Inquiries getting lost",
+      "Messages arrive through several channels, and follow-up depends on someone remembering.",
+      "Give each inquiry one record, a responsible person, and a next action."
+    ],
+    [
+      "Information scattered everywhere",
+      "Important files and details are spread across email, chats, folders, and spreadsheets.",
+      "Decide what belongs where and make the current version easy to find."
+    ],
+    [
+      "Unclear responsibilities",
+      "Tasks pass between people without a clear owner or next step.",
+      "Make handoffs explicit so everyone can see who does what and when."
+    ],
+    [
+      "Unreliable workflows",
+      "Tools, reminders, or automations stop working as expected.",
+      "Find where work breaks, fix the affected step, and make failures visible."
+    ],
+    [
+      "Too much manual follow-up",
+      "The team keeps checking statuses, requesting the same details, or chasing updates.",
+      "Remove repeat work and automate predictable steps where it helps."
+    ]
+  ],
+  "servicesEnd": "If you’re starting from scratch, we can set up a simple workflow for the requests or jobs you need to handle first.",
+  "methodTitle": "How I work",
+  "method": [
+    [
+      "Understand",
+      "Start with one real example. Find out where work stalls and agree on what needs to change."
+    ],
+    [
+      "Organize",
+      "Give information a home and make ownership, statuses, and rules clear."
+    ],
+    [
+      "Improve",
+      "Repair or build the smallest useful tool. Use automation or AI only where it serves a clear purpose."
+    ],
+    [
+      "Make it reliable",
+      "Test a normal case and an exception, agree on what to do when things go wrong, and leave clear instructions."
+    ]
+  ],
+  "aboutTitle": "About Aleks",
+  "aboutBody": "I’m Aleks Karpov. My work combines hands-on operations, managing small teams, and making administrative processes easier to run. I’ve worked with HR and payroll processes, and I build practical tools with Google Workspace and Apps Script when they fit the job.",
+  "aboutFocus": "I focus on making processes easier to follow, documenting how they work, and making it clear what to do when something stops.",
+  "aboutLink": "Aleks Karpov on LinkedIn",
+  "examples": "More workflow examples",
+  "contactLead": "You don't need a detailed specification. Just describe what's difficult, unreliable, or taking too much manual effort.",
+  "fields": [
+    "Name",
+    "Email",
+    "What's not working?"
+  ],
+  "subject": "A question for Aleks Work Systems",
+  "draft": "Open email draft",
   "copy": "Copy message",
+  "emailNote": "Your email app opens a draft for you to review and send. You can also copy the message and paste it into webmail.",
   "copied": "Message copied.",
-  "copyFail": "Please select and copy the message above.",
-  "emailHint": "The draft opens in your email app. You choose when to send it.",
-  "draftStart": "Hi Aleks, I’m starting a service business. Here’s what I offer and what I need in place for my first inquiries:",
-  "draftRun": "Hi Aleks, I run a service business. Here’s one part of our current setup I’d like to improve:"
+  "copyFail": "Copy the prepared message below.",
+  "direct": "Email Aleks directly"
 }
